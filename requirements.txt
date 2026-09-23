@@ -1,0 +1,15 @@
+# DCGAN / SGAN (TensorFlow/Keras版) の実行に必要
+tensorflow>=2.9,<2.16
+numpy
+pandas
+pydicom
+Pillow
+matplotlib
+scikit-learn
+
+# gen_movies.py（生成画像からmp4を作成）に必要
+opencv-python
+
+# sgan_pt.py（SGANのPyTorch移植版, 任意）を使う場合のみ
+# torch
+# torchvision

@@ -1,0 +1,33 @@
+# DICOM原データ（個人情報・再配布不可の可能性があるため除外）
+DICOMdata/
+DICOMdata_Nodule/
+DICOMdata_NonNodule/
+
+# 前処理済みデータ（巨大なnumpy配列）
+*.npy
+
+# 学習済み重み
+weights/
+weights_cgan/
+weights_dcgan/
+weights_sgan/
+*.h5
+
+# 生成画像・動画
+generated_images/
+generated_images_cgan/
+generated_images_sgan/
+generated_images_test/
+*.mp4
+
+# 学習ログ
+loss.csv
+loss_cgan.csv
+loss_sgan.csv
+
+# Python
+__pycache__/
+*.pyc
+
+# OS
+.DS_Store
