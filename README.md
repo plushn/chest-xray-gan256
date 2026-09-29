@@ -21,7 +21,6 @@
 ├── gen_data.py             # DCGAN用データ前処理（DICOM → numpy）
 ├── gen_data_sgan_v2.py      # SGAN用データ前処理（DICOM → numpy, ラベル付与・train/test分割）
 ├── gen_movies.py           # 学習過程の生成画像からmp4アニメーションを作成
-├── import unittest.py      # sgan.py の Generator 構造に対する簡易ユニットテスト
 └── requirements.txt
 ```
 
