@@ -19,6 +19,7 @@ generated_images_cgan/
 generated_images_sgan/
 generated_images_test/
 *.mp4
+!generator_evolution_epochs.mp4
 
 # 学習ログ
 loss.csv
