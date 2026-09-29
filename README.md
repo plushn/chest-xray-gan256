@@ -16,7 +16,9 @@
 
 学習が進むにつれてGeneratorが生成する胸部X線画像が変化していく様子です。
 
-▶ [generator_evolution_epochs.mp4](generator_evolution_epochs.mp4)
+![Generatorの生成過程](generator_evolution_epochs.gif)
+
+（動画版: [generator_evolution_epochs.mp4](generator_evolution_epochs.mp4)）
 
 ## 構成
 
