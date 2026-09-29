@@ -6,13 +6,19 @@
 数年前に「GANの勉強」として書いたコードで、以下の2種類の実装が含まれます。
 
 - **DCGAN** ([dcgan.py](dcgan.py)) : 標準的なDCGAN
-- **SGAN** ([sgan.py](sgan.py) / [sgan_pt.py](sgan_pt.py)) : 結節（nodule）/ 非結節（non-nodule）の2クラスラベルを使った半教師あり学習GAN（Semi-Supervised GAN）
-  - `sgan.py` : TensorFlow/Keras実装
-  - `sgan_pt.py` : PyTorchへの移植版（未完成・参考実装）
+- **SGAN** ([sgan.py](sgan.py)) : 結節（nodule）/ 非結節（non-nodule）の2クラスラベルを使った半教師あり学習GAN（Semi-Supervised GAN）
 
 > **Note**
 > 学習用に書いたコードをそのまま公開しています。リファクタリングは行っておらず、
 > コメントアウトされた実験コードや未整理の部分が残っています。
+
+## 生成過程
+
+学習が進むにつれてGeneratorが生成する胸部X線画像が変化していく様子です。
+
+![Generatorの生成過程](generator_evolution_epochs.gif)
+
+（動画版: [generator_evolution_epochs.mp4](generator_evolution_epochs.mp4)）
 
 ## 構成
 
@@ -20,13 +26,10 @@
 .
 ├── dcgan.py               # DCGAN本体（学習・画像生成）
 ├── sgan.py                # SGAN本体（TensorFlow/Keras版）
-├── sgan_pt.py              # SGAN（PyTorch移植版, 参考実装）
 ├── gen_data.py             # DCGAN用データ前処理（DICOM → numpy）
 ├── gen_data_sgan_v2.py      # SGAN用データ前処理（DICOM → numpy, ラベル付与・train/test分割）
 ├── gen_movies.py           # 学習過程の生成画像からmp4アニメーションを作成
-├── import unittest.py      # sgan.py の Generator 構造に対する簡易ユニットテスト
-├── requirements.txt
-└── readme.txt              # 当時の検討メモ（研究計画のドラフト）
+└── requirements.txt
 ```
 
 DICOM原データ・前処理済みnumpyデータ（`*.npy`）・学習済み重み・生成画像・ログ・動画は
@@ -94,7 +97,6 @@ python gen_movies.py
 
 - Python 3.9系
 - TensorFlow / Keras（2.9〜2.15系を想定）
-- Apple Silicon Mac (`mps` バックエンド利用コードが一部に残っています)
 
 ## ライセンス / データについて
 

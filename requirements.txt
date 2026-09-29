@@ -9,7 +9,3 @@ scikit-learn
 
 # gen_movies.py（生成画像からmp4を作成）に必要
 opencv-python
-
-# sgan_pt.py（SGANのPyTorch移植版, 任意）を使う場合のみ
-# torch
-# torchvision
