@@ -3,7 +3,8 @@
 胸部単純写真（DICOM）を学習データとして、GAN（Generative Adversarial Network）で
 256×256のグレースケール胸部X線画像を生成する学習用プロジェクトです。
 
-数年前に「GANの勉強」として書いたコードで、以下の2種類の実装が含まれます。
+ChatGPT登場前の数年前に、GANの勉強として書いたコードです。
+ネット上の情報を頼りに試行錯誤しながら自力で書いたため読みにくい部分がありますが、当時の記録としてあえてリファクタリングせず、そのまま公開しています。
 
 - **DCGAN** ([dcgan.py](dcgan.py)) : 標準的なDCGAN
 - **SGAN** ([sgan.py](sgan.py)) : 結節（nodule）/ 非結節（non-nodule）の2クラスラベルを使った半教師あり学習GAN（Semi-Supervised GAN）
@@ -17,8 +18,6 @@
 学習が進むにつれてGeneratorが生成する胸部X線画像が変化していく様子です。
 
 ![Generatorの生成過程](generator_evolution_epochs.gif)
-
-（動画版: [generator_evolution_epochs.mp4](generator_evolution_epochs.mp4)）
 
 ## 構成
 
